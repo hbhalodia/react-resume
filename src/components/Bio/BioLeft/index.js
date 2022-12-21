@@ -6,9 +6,9 @@ export default function BioLeft() {
 			<div className="mx-4">
 				<img className="block mx-auto h-24 rounded-full sm:mx-0 sm:shrink-0 object-cover w-[100px]" src={img} alt="Bio Pic" height={100} width={100} />
 			</div>
-			<div className="mx-4 my-4">
-				<h3>Hit Bhalodia</h3>
-				<h5>WordPress Engineer</h5>
+			<div className="font-Tungsten text-Tungston-Bio-font mx-4 my-4">
+				<h3 className="font-semibold">Hit Bhalodia</h3>
+				<h5 className="font-thin">WordPress Engineer</h5>
 			</div>
 		</div>
 	);
