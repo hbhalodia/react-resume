@@ -22,7 +22,7 @@ export default function ContactForm() {
 		} )
 		.then(
 			() => {
-				alert( 'Contacted Success!!' )
+				alert( 'Contacted Success!!' );
 				setName( '' );
 				setEmail( '' );
 				setMessage( '' );
