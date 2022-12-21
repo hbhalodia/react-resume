@@ -6,8 +6,8 @@ export default function ContactForm() {
 	const [email, setEmail] = React.useState( '' );
 	const [message, setMessage] = React.useState( '' );
 
-	function encode(data) {
-		return Object.keys(data)
+	function encode( data ) {
+		return Object.keys( data )
 		.map(
 			( key ) => encodeURIComponent( key ) + "=" + encodeURIComponent( data[ key ] )
 		).join( '&' );
@@ -20,8 +20,14 @@ export default function ContactForm() {
 			headers: { "Content-Type": "application/x-www-form-urlencoded" },
 			body: encode( { "form-name": "contact", name, email, message } ),
 		} )
-		.then( () => alert( 'Contacted Success!!' ) )
-		.catch( ( error ) => alert( error ) );
+		.then(
+			() => {
+				alert( 'Contacted Success!!' )
+				this.setName( '' );
+				this.setEmail( '' );
+				this.setMessage( '' );
+			}
+		).catch( ( error ) => alert( error ) );
 	}
 
 
