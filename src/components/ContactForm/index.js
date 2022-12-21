@@ -23,9 +23,9 @@ export default function ContactForm() {
 		.then(
 			() => {
 				alert( 'Contacted Success!!' )
-				this.setName( '' );
-				this.setEmail( '' );
-				this.setMessage( '' );
+				setName( '' );
+				setEmail( '' );
+				setMessage( '' );
 			}
 		).catch( ( error ) => alert( error ) );
 	}
